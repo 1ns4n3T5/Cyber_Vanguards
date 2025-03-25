@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS (Optional for Grid Layout) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #e0e0e0; /* Light gray background for contrast */
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Container for each card */
+    .service-card {
+      position: relative;
+      background-color: #f6d5d5; /* Light pink */
+      border-radius: 10px;
+      padding: 20px;
+      min-height: 150px;
+    }
+
+    /* Circle in the top-left corner */
+    .service-card .circle {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #dca8a8; /* Slightly darker pink */
+    }
+
+    /* Title within each card */
+    .service-card h5 {
+      margin-top: 10px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* Paragraph within each card */
+    .service-card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    /* Vertical Divider: Use a right border on the left column */
+    .divider-col {
+      border-right: 2px solid #ccc; /* Vertical line color */
+    }
+
+    /* Adjust spacing on smaller screens */
+    @media (max-width: 767.98px) {
+      .divider-col {
+        border-right: none; /* Remove divider on small screens if desired */
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row">
+      <!-- Left Column: Premium Services -->
+      <div class="col-lg-8 divider-col">
+        <h2>Premium Services</h2>
+        <!-- 2 rows, 3 columns each (total 6 items) -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+          <!-- Card 1: Dedicated Support -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Dedicated Support</h5>
+              <p>With our professional support staff, we provide dedicated communication channels for all managed services.</p>
+            </div>
+          </div>
+          <!-- Card 2: 24/7 Monitored -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>24/7 Monitored</h5>
+              <p>All Premium Web Hosting websites are monitored round-the-clock, ensuring immediate action on any issues.</p>
+            </div>
+          </div>
+          <!-- Card 3: Fully Managed -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Fully Managed</h5>
+              <p>Our SysAdmin team manages all server &amp; network configurations for your Premium Web Hosting services.</p>
+            </div>
+          </div>
+          <!-- Card 4: Auto Data Backup -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Auto Data Backup</h5>
+              <p>Your data is automatically backed up onto our secure cloud backup servers, keeping it safe and recoverable.</p>
+            </div>
+          </div>
+          <!-- Card 5: Flexible Pricing -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Flexible Pricing</h5>
+              <p>Choose a plan that meets your requirements and budget, ensuring cost-effective solutions.</p>
+            </div>
+          </div>
+          <!-- Card 6: Service Level Agreement -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Service Level Agreement</h5>
+              <p>All Premium Web Hosting services include SLAs, guaranteeing reliable performance and uptime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column: Free Items -->
+      <div class="col-lg-4">
+        <h2>Free Items</h2>
+        <!-- 2 rows, 2 columns each (total 4 items) -->
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Card 1: Free Domain -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Free Domain</h5>
+              <p>Register a free domain (e.g., .com, .net) with every Dedicated Web Hosting package.</p>
+            </div>
+          </div>
+          <!-- Card 2: Free CMS Deployment -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Free CMS Deployment</h5>
+              <p>We’ll install and configure popular CMS platforms like WordPress, Drupal, or Joomla at no extra cost.</p>
+            </div>
+          </div>
+          <!-- Card 3: Free System Deployment -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Free System Deployment</h5>
+              <p>Get your site up and running with our free system deployment and tuning on powerful Linux OS.</p>
+            </div>
+          </div>
+          <!-- Card 4: Free System Security -->
+          <div class="col">
+            <div class="service-card">
+              <div class="circle"></div>
+              <h5>Free System Security</h5>
+              <p>We provide basic OS-level and cloud firewall security to keep your environment protected.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

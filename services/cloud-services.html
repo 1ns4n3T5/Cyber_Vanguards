@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cloud & Infrastructure Services</title>
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Poppins&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS Files -->
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/service.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
+
+
+</head>
+
+<body class="service-details-page">
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background">
+            <div class="container">
+                <h1>Service Details</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="../index.html#services">Home</a></li>
+                        <li><a href="#os">Support Linux OS</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        </div>
+        <!-- Cloud Section -->
+        <section id="cloud" class="section service-section" data-aos="fade-up">
+            <div class="container section-title" data-aos="fade-up">
+                <h2 class="text-black title-underline">Cloud Virtual Servers</h2>
+                <p class="text-black">
+                    Harness the power of the digital ocean with our Cloud Virtual Server service—designed to be as
+                    resilient and
+                    agile as a Kraken slayer. Enjoy scalable, secure, and lightning-fast hosting that keeps your
+                    business
+                    thriving.
+                </p>
+            </div>
+            <div class="container" data-aos="fade-up">
+                <div class="row d-flex justify-content-center" id="cloud-cards">
+                    <!-- Cloud cards will be inserted here dynamically -->
+                </div>
+            </div>
+        </section>
+            <!--supported-os -->
+            <section id="os">
+            <div class="container section-title" data-aos="fade-up">
+                <h2 class="text-black title-underline">Supported Linux OS for Cloud Virtual Server</h2>
+            </div>
+
+            <div class="container" data-aos="fade-up">
+                <!-- Responsive row: 1 column on small screens, 2 on md, 4 on lg -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="os-cards">
+                    <!-- Cards will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/vendor/aos/aos.js"></script>
+
+
+    
+
+        <!-- Custom JS -->
+<script>    
+ /* script.js */
+// Initialize AOS animations
+AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
+  
+  // Data for Cloud Cards
+  const cloudCards = [
+    {
+      title: "Virtual Servers",
+      content: "We provide rental service for cloud servers for our customers' websites or services where they can choose to manage them by themselves or let our professional team handle it.",
+      icon: "bi-cloud",
+      iconColor: "text-primary",
+      aosDelay: 0
+    },
+    {
+      title: "Cloud Network Devices",
+      content: "Enhance your digital infrastructure with customized network devices featuring state-of-the-art load balancers, VPNs, and comprehensive security solutions.",
+      icon: "bi-hdd-network",
+      iconColor: "text-success",
+      aosDelay: 100
+    },
+    {
+      title: "System Administration",
+      content: "Benefit from our dedicated Linux system administration services that ensure flawless server deployment, seamless installation, and expert configuration.",
+      icon: "bi-terminal",
+      iconColor: "text-warning",
+      aosDelay: 200
+    },
+    {
+      title: "99.99% Uptime",
+      content: "Enjoy peace of mind with our industry-leading 99.99% uptime guarantee, ensuring continuous and reliable operation of your services.",
+      icon: "bi-clock-history",
+      iconColor: "text-danger",
+      aosDelay: 300
+    },
+    {
+      title: "24/7 Monitored",
+      content: "Stay ahead with round-the-clock monitoring where our team detects and addresses issues immediately to keep your operations secure.",
+      icon: "bi-shield-check",
+      iconColor: "text-info",
+      aosDelay: 400
+    }
+  ];
+
+   // Function to generate a card's HTML
+   function generateCard(cardData) {
+    return `
+      <div class="col-md-4 mb-3 mt-5" data-aos="fade-up" data-aos-delay="${cardData.aosDelay}">
+        <div class="card h-100 shadow card-hover">
+          <div class="icon-circle">
+            <i class="bi ${cardData.icon} ${cardData.iconColor} display-5"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-black mt-5">${cardData.title}</h5>
+            <p class="card-text text-black">${cardData.content}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  
+// Insert Cloud Cards into the Cloud section
+    const cloudContainer = document.getElementById('cloud-cards');
+  cloudCards.forEach(card => {
+    cloudContainer.innerHTML += generateCard(card);
+  });
+       </script>
+        <!-- Main JS File -->
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/support.js"></script>
+</body>
+
+</html>

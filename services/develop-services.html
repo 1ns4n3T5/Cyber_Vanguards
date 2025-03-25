@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cloud & Infrastructure Services</title>
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Poppins&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS Files -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/service.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
+</head>
+<body class="service-details-page">
+
+  <main class="main">
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container">
+        <h1>Service Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="../index.html#services">Home</a></li>
+           <li><a href="#premium">Premium Web-Hosting</a></li>
+           <li><a href="#cms">Ready-Made VPS </a></li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+  </main>
+
+  <!-- Developing Services -->
+  <section class="section service-section" id="develop">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-black title-underline">Developing Services</h2>
+        <p class="text-black">
+          Conquer the digital frontier with our IT and Infrastructure services—where our Kraken Slayers fortify your
+          Embark on your digital journey with our Developing Service—where Ctarnidd11 transforms your vision into
+          cutting-edge web and app solutions, crafted with the relentless creativity of Kraken slayers navigating the
+          digital abyss.
+        </p>
+      </div>
+      <div class="container mt-3" data-aos="fade-up">
+        <div class="row d-flex row-cols-1 row-cols-lg-6 justify-content-center" id="dev-cards">
+          <!-- Developing services cards will be inserted here dynamically -->
+        </div>
+      </div>
+  </section>
+
+  <!-- Premium Web Hosting -->
+  <section id="premium">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 class="text-black title-underline">Premium Web Hosting Services</h2>
+    </div>
+    <div class="container mt-3" data-aos="fade-up">
+      <div class="row">
+        <!-- Left Column (Premium Services) -->
+        <div class="col-lg-8 divider-col">
+          <h2 class="text-black">Premium Services</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="premium-row">
+            <!-- Premium Services cards will be inserted here dynamically -->
+          </div>
+        </div>
+
+        <!-- Right Column (Free Items) -->
+        <div class="col-lg-4">
+          <h2>Free Services</h2>
+          <div class="row row-cols-1 row-cols-md-2 g-4" id="free-row">
+            <!-- Free Services cards will be inserted here dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CMS Section -->
+  <section class="section" id="cms">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 class="text-black title-underline">Ready-Made VPS Web Hosting</h2>
+      <p class="text-black">We provide Ready-Made CMS Web Hostings for individuals or companies at lower price than
+        our <a href="#hosting">Premium Web Hosting Services.</a> </p>
+    </div>
+    <div class="container mt-3" data-aos="fade-up">
+      <div class="row d-flex row-cols-1 row-cols-lg-3 justify-content-center" id="cms-cards">
+        <!-- CMS cards can be inserted here dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  
+  <!-- Inline JS: Initialize AOS and insert dynamic cards -->
+  <script>
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+
+    // Developing Services 
+    const devServices = [
+      {
+        title: "Website/Application Development",
+        content: "We build modern websites and web applications that help your business grow with scalable, robust solutions.",
+        icon: "bi-code-slash",
+        iconColor: "text-primary",
+        aosDelay: 0
+      },
+      {
+        title: "Website/Application Maintenance",
+        content: "We keep your site and apps running smoothly with regular updates and support for both minor tweaks and major changes.",
+        icon: "bi-tools",
+        iconColor: "text-secondary",
+        aosDelay: 100
+      },
+      {
+        title: "Customized Websites",
+        content: "We design custom web applications tailored to your needs—from e-commerce to back-office systems—so you stand out.",
+        icon: "bi-sliders",
+        iconColor: "text-warning",
+        aosDelay: 200
+      },
+      {
+        title: "Mobile Application Development",
+        content: "We create mobile apps for Android and iOS, whether native or hybrid, ensuring your business stays connected on any device.",
+        icon: "bi-phone",
+        iconColor: "text-success",
+        aosDelay: 300
+      },
+      {
+        title: "Opensource Codes",
+        content: "We offer source codes under a separate agreement, giving you full control over your project for easy customization.",
+        icon: "bi-github",
+        iconColor: "text-dark",
+        aosDelay: 400
+      },
+      {
+        title: "SLA & Milestones",
+        content: "Our projects follow clear milestones and Service Level Agreements to ensure timely, quality delivery every time.",
+        icon: "bi-card-checklist",
+        iconColor: "text-danger",
+        aosDelay: 500
+      }
+    ];
+
+    // Helper function to create a developing service card's HTML
+    function createDevCard(service) {
+      return `
+        <div class="col gy-5">
+          <div class="card h-100 text-center card-hover shadow">
+            <div class="icon-circle">
+              <i class="bi ${service.icon} ${service.iconColor} fs-1"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-5 text-black">${service.title}</h5>
+              <p class="card-text mt-3 text-black">${service.content}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Insert generated cards into the container with id "dev-cards"
+    const devCardsContainer = document.getElementById('dev-cards');
+    devServices.forEach(service => {
+      devCardsContainer.innerHTML += createDevCard(service);
+    });
+
+    // Premium Hosting Data
+    const premiumData = [
+      {
+        title: "Dedicated Support",
+        content: "With our customer support staff, we provide dedicated communication channels for all managed services.",
+        icon: "bi-headset",
+        iconColor: "text-primary"
+      },
+      {
+        title: "24/7 Monitored",
+        content: "All Premium Web Hosting websites are monitored round-the-clock, ensuring immediate action on any issues.",
+        icon: "bi-clock-history",
+        iconColor: "text-info"
+      },
+      {
+        title: "Fully Managed",
+        content: "Our SysAdmin team manages all server & network configurations for your Premium Web Hosting services.",
+        icon: "bi-gear",
+        iconColor: "text-secondary"
+      },
+      {
+        title: "Auto Data Backup",
+        content: "Your data is automatically backed up onto our secure cloud backup servers, keeping it safe and recoverable.",
+        icon: "bi-cloud-upload",
+        iconColor: "text-success"
+      },
+      {
+        title: "Flexible Pricing",
+        content: "Our pricing adapts to your requirements and budget, offering cost-effective solutions for your hosting needs.",
+        icon: "bi-currency-dollar",
+        iconColor: "text-danger"
+      },
+      {
+        title: "Service Level Agreement",
+        content: "All Premium Web Hosting services include SLAs, guaranteeing reliable performance and uptime.",
+        icon: "bi-card-checklist",
+        iconColor: "text-warning"
+      }
+    ];
+
+    const freeData = [
+      {
+        title: "Free Domain",
+        content: "Register a free domain (e.g., .com, .net) with every Dedicated Web Hosting package.",
+        icon: "bi-globe",
+        iconColor: "text-primary"
+      },
+      {
+        title: "Free CMS Deployment",
+        content: "We’ll install and configure popular CMS platforms like WordPress, Drupal, or Joomla at no extra cost.",
+        icon: "bi-file-earmark-text",
+        iconColor: "text-info"
+      },
+      {
+        title: "Free System Deployment",
+        content: "Get your site up and running with our free system deployment and tuning on powerful Linux OS.",
+        icon: "bi-server",
+        iconColor: "text-secondary"
+      },
+      {
+        title: "Free System Security",
+        content: "We provide basic OS-level and cloud firewall security to keep your environment protected.",
+        icon: "bi-shield-lock",
+        iconColor: "text-success"
+      }
+    ];
+
+    // Reusable function to build a card's HTML
+    function createCard(item) {
+      return `
+        <div class="col gy-5">
+          <div class="card h-100 shadow card-hover">
+            <div class="icon-circle">
+              <i class="bi ${item.icon} ${item.iconColor} fs-1"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-5">${item.title}</h5>
+              <p>${item.content}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Insert Premium Services cards
+    const premiumRow = document.getElementById("premium-row");
+    premiumData.forEach(item => {
+      premiumRow.innerHTML += createCard(item);
+    });
+
+    // Insert Free Items cards
+    const freeRow = document.getElementById("free-row");
+    freeData.forEach(item => {
+      freeRow.innerHTML += createCard(item);
+    });
+
+    // Data array for CMS VPS services
+const cmsData = [
+  {
+    title: "WordPress VPS",
+    content: "Ready-to-use WordPress CMS installed and configured on our cloud VPS by our professionals.",
+    icon: "bi-pencil-square",
+    iconColor: "text-primary"
+  },
+  {
+    title: "Drupal VPS",
+    content: "Ready-to-use Drupal CMS installed and configured on our cloud VPS by our professionals.",
+    icon: "bi-droplet",
+    iconColor: "text-danger"
+  },
+  {
+    title: "Joomla VPS",
+    content: "Ready-to-use Joomla CMS installed and configured on our cloud VPS by our professionals.",
+    icon: "bi-window",
+    iconColor: "text-warning"
+  }
+];
+
+// Function to create a CMS card's HTML
+function createCMSCard(item) {
+  return `
+    <div class="col gy-5">
+      <div class="card text-center p-3 h-100 shadow card-hover">
+        <div class="icon-circle">
+          <i class="bi ${item.icon} ${item.iconColor} fs-1"></i>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-black">${item.title}</h5>
+          <p class="card-text text-black">${item.content}</p>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Insert CMS cards into the container
+const cmsCardsContainer = document.getElementById('cms-cards');
+cmsData.forEach(item => {
+  cmsCardsContainer.innerHTML += createCMSCard(item);
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cloud & Infrastructure Services</title>
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS Files -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/service.css" rel="stylesheet">
+
+  <!-- Additional CSS (if needed) -->
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
+</head>
+
+<body class="service-details-page">
+  <main class="main">
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container">
+        <h1>Service Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="../index.html#services">Home</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Infrastructure Section -->
+    <section id="infra" class="section service-section" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-black title-underline">IT and Infrastructure Services</h2>
+        <p class="text-black">
+          Conquer the digital frontier with our IT and Infrastructure services—where our Kraken Slayers fortify your systems with robust, scalable solutions, keeping your operations resilient and connected through every cyber storm.
+        </p>
+      </div>
+      <div class="container mt-3" data-aos="fade-up">
+        <div class="row d-flex justify-content-center" id="infra-cards">
+          <!-- Infrastructure cards will be inserted here dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- External JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+
+  <!-- Combined JavaScript for Infrastructure Cards -->
+  <script>
+
+AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
+    // Data for Infrastructure Cards
+    const infraCards = [
+      {
+        title: "Linux Server Administration",
+        content: "Comprehensive administration services including installation, configuration, management, and maintenance for both physical and cloud servers.",
+        icon: "bi-terminal",
+        iconColor: "text-success",
+        aosDelay: 0
+      },
+      {
+        title: "Server Security",
+        content: "Robust protection at the OS and service levels. We configure firewalls and security measures to prevent unauthorized access.",
+        icon: "bi-shield-lock",
+        iconColor: "text-danger",
+        aosDelay: 100
+      },
+      {
+        title: "Regular Data Backup",
+        content: "Secure and efficient backup solutions to protect your valuable data, ensuring rapid recovery when needed.",
+        icon: "bi-hdd",
+        iconColor: "text-primary",
+        aosDelay: 200
+      },
+      {
+        title: "Infrastructure Planning & Implementation",
+        content: "Scalable, future-ready infrastructure design and implementation that efficiently handles high traffic loads.",
+        icon: "bi-diagram-3",
+        iconColor: "text-warning",
+        aosDelay: 300
+      },
+      {
+        title: "Service Level Agreement (SLA)",
+        content: "All our services come with a comprehensive SLA to guarantee reliability and performance.",
+        icon: "bi-file-earmark-text",
+        iconColor: "text-info",
+        aosDelay: 400
+      },
+      {
+        title: "Infrastructure Monitoring",
+        content: "Our 24/7 Network Operations Center continuously monitors system performance and network health with real-time alerts.",
+        icon: "bi-speedometer2",
+        iconColor: "text-secondary",
+        aosDelay: 500
+      },
+      {
+        title: "Disaster Recovery",
+        content: "Expert disaster recovery planning and implementation ensuring minimal downtime for your online services.",
+        icon: "bi-life-preserver",
+        iconColor: "text-dark",
+        aosDelay: 600
+      }
+    ];
+
+    // Function to generate a card's HTML
+    function generateCard(cardData) {
+      return `
+        <div class="col-md-4 mb-3 mt-5" data-aos="fade-up" data-aos-delay="${cardData.aosDelay}">
+          <div class="card h-100 shadow card-hover">
+            <div class="icon-circle">
+              <i class="bi ${cardData.icon} ${cardData.iconColor} display-5"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-black mt-5">${cardData.title}</h5>
+              <p class="card-text text-black">${cardData.content}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Insert Infrastructure Cards into the Infra section
+    const infraContainer = document.getElementById('infra-cards');
+    infraCards.forEach(card => {
+      infraContainer.innerHTML += generateCard(card);
+    });
+  </script>
+
+  <!-- Optionally, include additional JS files if needed -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
