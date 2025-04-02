@@ -70,7 +70,7 @@
   bottom: 0;
   width: 100%; /* Adjust the width as needed */
   height: 3px; /* Thickness of the underline */
-  background-color: rgb(5, 164, 143); /* Green underline */
+  background-color: #018ccd; /* Green underline */
 }
 
 /*divider line */
@@ -84,5 +84,17 @@
   .divider-col {
     border-right: none;
     margin-bottom: 2rem;
+  }
+}
+
+.text-responsive {
+  line-height: 2rem; 
+  text-align: justify;/* Default for large screens */
+}
+
+@media (max-width: 1024px) { /* Adjust breakpoint as needed */
+  .text-responsive {
+    line-height: 1.5rem;
+    text-align: center;
   }
 }

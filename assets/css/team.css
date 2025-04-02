@@ -1,0 +1,97 @@
+/* General Section */
+.team {
+    padding: 60px 0;
+}
+
+/* Card Styling */
+.team-card {
+    background: white;
+    padding-top: 60px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    
+}
+
+/* Profile Image Styling */
+.profile-img-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    background: white;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Name & Role */
+.team-name {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.team-role {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 1.5rem;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* 🔥 Improved Responsive Fixes */
+@media (max-width: 768px) {
+    .profile-img-container {
+        width:100px;
+        height:100px;
+        top: -40px;
+    }
+    .profile-img {
+        max-width: 80px; /* Image scales properly */
+        height: auto;
+    }
+    .team-card {
+        padding-top: 50px;
+    }
+    .team-name {
+        font-size: 1rem;
+    }
+    .team-role {
+        font-size: 0.9rem;
+    }
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+/* 🔥 Responsive Fix for Row Spacing */
+@media (max-width: 768px) {
+   .repo {
+        margin-top: 50px; /* Adds margin for second row */
+    }
+}
+
