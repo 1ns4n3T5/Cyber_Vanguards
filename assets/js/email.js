@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".php-email-form").addEventListener("submit", function (event) {
         event.preventDefault();
         
-        const serviceID = "service_spx5yx5";
-        const templateID = "template_o4j85bv";
-        const publicKey = "8rjSoa8g4C5KIF3s1";
+        const serviceID = "service_uvs3ypy";
+        const templateID = "template_vt0urue";
+        const publicKey = "5uaGJFon1MurFwUor";
 
         const formData = {
             name: document.querySelector("input[name='name']").value,
