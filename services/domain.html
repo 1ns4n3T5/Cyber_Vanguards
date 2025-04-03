@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Cyber Vanguards | Infra </title>
+  <title>Domain Registration Services</title>
 
   <!-- Favicons -->
   <link href="../assets/img/nav-logo.png" rel="icon">
@@ -26,7 +26,7 @@
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/service.css" rel="stylesheet">
 
-  <!-- Additional CSS (if needed) -->
+  <!-- Additional CSS -->
   <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
 </head>
 
@@ -39,22 +39,20 @@
         <nav class="breadcrumbs">
           <ol>
             <li><a href="../index.html#services">Home</a></li>
-            <li class="current">Service Details</li>
+            <li class="current">Domain Registration</li>
           </ol>
         </nav>
       </div>
     </div>
     <!-- End Page Title -->
 
-    <!-- Infrastructure Section -->
-    <section id="infra" class="section service-section" data-aos="fade-up">
+    <!-- Domain Registration Services Section -->
+    <section id="domain-services" class="section service-section" data-aos="fade-up">
       <div class="container section-title" data-aos="fade-up">
-        <h2 class="text-black title-underline">IT and Infrastructure Services</h2>
+        <h2 class="text-primary title-underline">Our Domain Services</h2>
       </div>
       <div class="container mt-3" data-aos="fade-up">
-        <div class="row d-flex justify-content-center" id="infra-cards">
-          <!-- Infrastructure cards will be inserted here dynamically -->
-        </div>
+        <div class="row d-flex justify-content-center" id="domain-cards"></div>
       </div>
     </section>
   </main>
@@ -63,68 +61,57 @@
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/aos/aos.js"></script>
 
-  <!-- Combined JavaScript for Infrastructure Cards -->
+  <!-- JavaScript to Generate Domain Service Cards -->
   <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true
-  });
-    // Data for Infrastructure Cards
-    const infraCards = [
+    // Domain Registration Services
+    const domainCards = [
       {
-        title: "Linux Server Administration",
-        content: "Comprehensive administration services including installation, configuration, management, and maintenance for both physical and cloud servers.",
-        icon: "bi-terminal",
-        iconColor: "text-success",
+        title: "Domain Registration (.mm)",
+        content: "We provide registration services for '.com.mm' and '.net.mm' domain names at your choice.",
+        icon: "bi-globe2",
+        iconColor: "text-primary",
         aosDelay: 0
       },
       {
-        title: "Server Security",
-        content: "Robust protection at the OS and service levels. We configure firewalls and security measures to prevent unauthorized access.",
-        icon: "bi-shield-lock",
-        iconColor: "text-danger",
+        title: "Special Domains",
+        content: "We also register '.org.mm' and '.edu.mm' domains, which require additional documentation.",
+        icon: "bi-file-earmark-text",
+        iconColor: "text-success",
         aosDelay: 100
       },
       {
-        title: "Regular Data Backup",
-        content: "Secure and efficient backup solutions to protect your valuable data, ensuring rapid recovery when needed.",
-        icon: "bi-hdd",
-        iconColor: "text-primary",
+        title: "DNS Management",
+        content: "All registered domains can be managed and maintained by customers at their convenience.",
+        icon: "bi-server",
+        iconColor: "text-warning",
         aosDelay: 200
       },
       {
-        title: "Infrastructure Planning & Implementation",
-        content: "Scalable, future-ready infrastructure design and implementation that efficiently handles high traffic loads.",
-        icon: "bi-diagram-3",
-        iconColor: "text-warning",
+        title: "Integration Services",
+        content: "We provide integration services with web and email for all registered domains.",
+        icon: "bi-link-45deg",
+        iconColor: "text-info",
         aosDelay: 300
       },
       {
-        title: "Service Level Agreement (SLA)",
-        content: "All our services come with a comprehensive SLA to guarantee reliability and performance.",
-        icon: "bi-file-earmark-text",
-        iconColor: "text-info",
+        title: "DDoS Protection",
+        content: "We offer DDoS protection and mitigation services to keep your domain secure.",
+        icon: "bi-shield-lock-fill",
+        iconColor: "text-danger",
         aosDelay: 400
       },
       {
-        title: "Infrastructure Monitoring",
-        content: "Our 24/7 Network Operations Center continuously monitors system performance and network health with real-time alerts.",
-        icon: "bi-speedometer2",
+        title: "Consulting Services",
+        content: "If you need advice or consulting, we are ready to support your domain needs.",
+        icon: "bi-chat-dots",
         iconColor: "text-secondary",
         aosDelay: 500
-      },
-      {
-        title: "Disaster Recovery",
-        content: "Expert disaster recovery planning and implementation ensuring minimal downtime for your online services.",
-        icon: "bi-life-preserver",
-        iconColor: "text-dark",
-        aosDelay: 600
       }
     ];
 
-    // Function to generate a card's HTML
+    // Function to generate service cards
     function generateCard(cardData) {
       return `
         <div class="col-md-4 mb-3 mt-5" data-aos="fade-up" data-aos-delay="${cardData.aosDelay}">
@@ -141,14 +128,10 @@ AOS.init({
       `;
     }
 
-    // Insert Infrastructure Cards into the Infra section
-    const infraContainer = document.getElementById('infra-cards');
-    infraCards.forEach(card => {
-      infraContainer.innerHTML += generateCard(card);
-    });
+    // Insert Domain Service Cards
+    document.getElementById('domain-cards').innerHTML = domainCards.map(generateCard).join('');
   </script>
 
-  <!-- Optionally, include additional JS files if needed -->
   <script src="../assets/js/main.js"></script>
 </body>
 

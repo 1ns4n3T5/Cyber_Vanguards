@@ -207,17 +207,17 @@
 })();
 
 
-function redirectToTelegram() {
+function redirect() {
   Swal.fire({
       title: "Contact Us",
-      text: "Redirect to our Telegram?",
+      text: "Redirect to our Customer Support",
       icon: "info",
       showCancelButton: true,
       confirmButtonText: "OK",
       cancelButtonText: "Cancel"
   }).then((result) => {
       if (result.isConfirmed) {
-          window.location.href = "https://t.me/+sXVIQpuhHY84ZTQ1"; // Replace with your Telegram link
+          window.location.href = "https://chat.cybervanguards.tech/"; // Replace with your Telegram link
       }
   });
 }

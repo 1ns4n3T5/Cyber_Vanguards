@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cyber Vanguards | Infra</title>
+
+  <!-- Favicons -->
+  <link href="../assets/img/nav-logo.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS Files -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/service.css" rel="stylesheet">
+
+  <!-- Additional CSS -->
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
+</head>
+
+<body class="service-details-page">
+  <main class="main">
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container">
+        <h1>Service Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="../index.html#services">Home</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Cybersecurity Services Section -->
+    <section id="cybersecurity" class="section service-section" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-black title-underline">Cybersecurity Services</h2>
+      </div>
+      <div class="container mt-3" data-aos="fade-up">
+        <div class="row d-flex justify-content-center" id="cyber-cards"></div>
+      </div>
+    </section>
+
+    <!-- Offensive Security & Red Team Services -->
+    <section id="red-team" class="section service-section" data-aos="fade-up">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-danger title-underline">Offensive Security & Red Team Services</h2>
+      </div>
+      <div class="container mt-3" data-aos="fade-up">
+        <div class="row d-flex justify-content-center" id="red-team-cards"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- External JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+
+  <!-- JavaScript to Generate Service Cards -->
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    // Cybersecurity Services
+    const cyberCards = [
+      {
+        title: "24/7 Security Monitoring",
+        content: "Our SOC team continuously monitors security events on your servers, networks, applications, and services.",
+        icon: "bi-eye-fill",
+        iconColor: "text-success",
+        aosDelay: 0
+      },
+      {
+        title: "Security Incident Handling",
+        content: "We handle security incidents with expert response based on severity and impact, providing detailed reports.",
+        icon: "bi-exclamation-triangle-fill",
+        iconColor: "text-danger",
+        aosDelay: 100
+      },
+      {
+        title: "Vulnerability Assessment",
+        content: "We scan monitored assets for vulnerabilities, create assessment reports, and recommend remediation plans.",
+        icon: "bi-shield-lock",
+        iconColor: "text-primary",
+        aosDelay: 200
+      },
+      {
+        title: "End-Point Security",
+        content: "Our security solutions protect servers, network devices, laptops, desktops, and mobile devices.",
+        icon: "bi-pc",
+        iconColor: "text-warning",
+        aosDelay: 300
+      },
+      {
+        title: "Data Protection",
+        content: "We ensure data privacy, availability, and integrity within our service scope.",
+        icon: "bi-lock-fill",
+        iconColor: "text-info",
+        aosDelay: 400
+      },
+      {
+        title: "Security Strategy Planning",
+        content: "We provide security strategy planning to mature your security environment step by step.",
+        icon: "bi-clipboard-data",
+        iconColor: "text-secondary",
+        aosDelay: 500
+      },
+      {
+        title: "SLA & KPI",
+        content: "We offer SLAs on our cybersecurity services and strive to meet customer-defined KPIs.",
+        icon: "bi-file-earmark-text",
+        iconColor: "text-dark",
+        aosDelay: 600
+      },
+      {
+        title: "Security Awareness",
+        content: "We provide cybersecurity awareness sessions to train employees and executives on best practices.",
+        icon: "bi-lightbulb",
+        iconColor: "text-warning",
+        aosDelay: 700
+      },
+      {
+        title: "Reporting & Catch-Up Meetings",
+        content: "We deliver detailed security reports and meetings on a weekly, monthly, and yearly basis.",
+        icon: "bi-bar-chart-line",
+        iconColor: "text-primary",
+        aosDelay: 800
+      }
+    ];
+
+    // Offensive Security & Red Team Services
+    const redTeamCards = [
+      {
+        title: "Black Box Testing",
+        content: "Simulating real-world cyber attacks with no prior knowledge to identify critical vulnerabilities.",
+        icon: "bi-incognito",
+        iconColor: "text-danger",
+        aosDelay: 900
+      },
+      {
+        title: "Penetration Testing",
+        content: "Ethical hacking techniques to test the security resilience of your systems, applications, and networks.",
+        icon: "bi-key-fill",
+        iconColor: "text-warning",
+        aosDelay: 1000
+      },
+      {
+        title: "Bug Hunting",
+        content: "Identifying and reporting security vulnerabilities in web applications, APIs, and network infrastructure.",
+        icon: "bi-bug-fill",
+        iconColor: "text-info",
+        aosDelay: 1100
+      }
+    ];
+
+    // Function to generate service cards
+    function generateCard(cardData) {
+      return `
+        <div class="col-md-4 mb-3 mt-5" data-aos="fade-up" data-aos-delay="${cardData.aosDelay}">
+          <div class="card h-100 shadow card-hover">
+            <div class="icon-circle">
+              <i class="bi ${cardData.icon} ${cardData.iconColor} display-5"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-black mt-5">${cardData.title}</h5>
+              <p class="card-text text-black">${cardData.content}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Insert Cybersecurity Cards
+    document.getElementById('cyber-cards').innerHTML = cyberCards.map(generateCard).join('');
+
+    // Insert Red Team Cards
+    document.getElementById('red-team-cards').innerHTML = redTeamCards.map(generateCard).join('');
+  </script>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

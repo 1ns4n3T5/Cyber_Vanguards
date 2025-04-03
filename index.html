@@ -93,7 +93,7 @@
         <div class="row justify-content-center" data-aos="zoom-out">
           <div class="col-lg-8">
             <img src="assets/img/hero_logo.png" alt="" class="img-fluid mb-3">
-            <button onclick="redirectToTelegram()" class="button-85">Explore</button> 
+            <button onclick="redirect()" class="button-85">Explore</button> 
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-shield-shaded"></i></div>
               <div>
-                <h4 class="title"><a href="service-details.html" class="stretched-link">Cyber Security Services</a></h4>
+                <h4 class="title"><a href="services/cyber-security.html" class="stretched-link">Cyber Security Services</a></h4>
                 <p class="description">Protect your assets with our comprehensive cybersecurity suite, offering 24/7 SOC
                     monitoring, rapid incident response, vulnerability assessments, endpoint protection, and strategic
                     security planning.</p>
@@ -196,7 +196,7 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-database"></i></div>
               <div>
-                <h4 class="title"><a href="service-details.html" class="stretched-link">Domain Registration</a></h4>
+                <h4 class="title"><a href="services/domain.html" class="stretched-link">Domain Registration</a></h4>
                 <p class="description">Secure your online identity with our domain services—register popular domains
                     like ".com.mm" and ".net.mm," manage DNS seamlessly, and benefit from integrated web/email solutions,
                     robust DDoS protection, and expert consulting.</p>
@@ -471,8 +471,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Contact Us</h2>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -511,7 +510,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form method="post" class="php-email-form"  onsubmit="handleFormSubmission(event, this)" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -519,7 +518,7 @@
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email or Phone" required="">
                 </div>
 
                 <div class="col-md-12">
@@ -531,11 +530,7 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                <button type="submit">Send Message</button>
                 </div>
 
               </div>
@@ -573,7 +568,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Knight</span>
+            <span class="sitename">Cyber Vanguards</span>
           </a>
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
@@ -587,8 +582,8 @@
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
           </ul>
         </div>
@@ -596,10 +591,11 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services/cloud-services.html#cloud">cloud services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services/infra-services.html#infra">Infrastructure</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services/develop-services.html#develop">Developing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services/cyber-security.html">Cyber-Security</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services/domain.html">Domain Registration</a></li>
           </ul>
         </div>
 
@@ -618,13 +614,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Knight</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Cyber Vanguards</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
@@ -647,6 +638,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="assets/js/email.js"></script>
   
 
 </body>
