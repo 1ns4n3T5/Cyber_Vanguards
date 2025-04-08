@@ -217,7 +217,7 @@ function redirect() {
       cancelButtonText: "Cancel"
   }).then((result) => {
       if (result.isConfirmed) {
-          window.location.href = "https://chat.cybervanguards.tech/"; // Replace with your Telegram link
+          window.location.href = "https://chat.cybervanguards.tech/#/room/#helpdesk:chat.cybervanguards.tech"; // Replace with your Telegram link
       }
   });
 }
